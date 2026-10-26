@@ -1,6 +1,5 @@
 module "dev-vpc" {
-  source  = "app.terraform.io/devsecop_practice/network/aws"
-  version = "1.0.0"
+  source             = "../modules/network"
   vpc_cidr           = var.vpc_cidr
   vpc_name           = var.vpc_name
   environment        = var.environment
@@ -12,8 +11,7 @@ module "dev-vpc" {
 }
 
 module "dev_sg" {
-  source  = "app.terraform.io/devsecop_practice/sg/aws"
-  version = "1.0.0"
+  source        = "../modules/sg"
   vpc_id        = module.dev-vpc.vpc_id
   vpc_name      = var.vpc_name
   environment   = var.environment
@@ -23,8 +21,7 @@ module "dev_sg" {
 
 module "compute-instance" {
 
-  source  = "app.terraform.io/devsecop_practice/compute/aws"
-  version = "1.0.0"
+  source         = "../modules/compute"
   public_subnet  = module.dev-vpc.public_subnets
   sg_id          = module.dev_sg.sg_id
   common_tags    = local.common_tags
