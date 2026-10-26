@@ -1,0 +1,38 @@
+# Images and screenshots
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.tif
+*.tiff
+*.svg
+*.ico
+*.heic
+
+# Terraform working directory and state
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Variable files may contain credentials or other secrets
+*.tfvars
+*.tfvars.json
+
+# Terraform plans and crash logs
+*.tfplan
+crash.log
+crash.*.log
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Private keys and local credential files
+*.pem
+*.key
+credentials
+credentials.*
