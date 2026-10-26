@@ -1,0 +1,9 @@
+variable "public_subnet" {}
+variable "sg_id" {}
+variable "common_tags" {}
+variable "aws_region" {}
+variable "private_subnet" {}
+variable "key_name" {}
+variable "azs" {}
+variable "environment" {}
+variable "amis" {}
