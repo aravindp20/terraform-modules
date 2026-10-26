@@ -16,9 +16,9 @@
 *.ico
 *.heic
 
-# Variable files may contain credentials or other secrets
-*.tfvars
-*.tfvars.json
+# # Variable files may contain credentials or other secrets
+# *.tfvars
+# *.tfvars.json
 
 # Terraform plans and crash logs
 *.tfplan
